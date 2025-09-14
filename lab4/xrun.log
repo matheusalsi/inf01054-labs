@@ -1,0 +1,45 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Sep 09, 2025 at 14:53:54 -03
+xrun
+	rca.v
+	rca_test.v
+file: rca.v
+	module worklib.full_adder:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_rca_4bits
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.full_adder:v <0x79156964>
+			streams:   0, words:     0
+		worklib.tb_rca_4bits:v <0x109b265f>
+			streams:   4, words: 13180
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       3
+		Registers:               3       3
+		Scalar wires:            9       -
+		Expanded wires:          8       2
+		Initial blocks:          1       1
+		Cont. assignments:       0       2
+		Pseudo assignments:      3       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_rca_4bits:v
+Loading snapshot worklib.tb_rca_4bits:v .................... Done
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+Time | a    b    cin | sum   cout
+-----------------------------------
+10000 | 0000 0000 0 | 0000 0
+20000 | 0101 0011 0 | 1000 0
+30000 | 1111 0001 0 | 0000 1
+40000 | 1010 0101 1 | 0000 1
+50000 | 1111 1111 1 | 1111 1
+Simulation complete via $finish(1) at time 50 NS + 0
+./rca_test.v:40     $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s013: Exiting on Sep 09, 2025 at 14:53:55 -03  (total: 00:00:01)
