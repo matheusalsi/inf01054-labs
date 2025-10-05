@@ -1,2 +1,11 @@
 # xcelium
 xcelium.d/
+*.log*
+*.history
+
+# genus
+fv/
+outputs/
+reports
+*.cmd*
+*.rs*

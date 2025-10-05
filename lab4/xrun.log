@@ -1,45 +1,59 @@
 xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s013: Started on Sep 09, 2025 at 14:53:54 -03
+TOOL:	xrun(64)	23.09-s013: Started on Sep 16, 2025 at 22:00:52 -03
 xrun
-	rca.v
-	rca_test.v
-file: rca.v
-	module worklib.full_adder:v
+	rtl/rca_Nbits.v
+	tb/tb_rca_Nbits.v
+Recompiling... reason: unable to stat '/./home/inf01185/matheus.almeida/src/inf01054-labs/lab4/rtl/rca_Nbits.v'.
+file: tb/tb_rca_Nbits.v
+	module worklib.tb_rca_NBits:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
-		tb_rca_4bits
+		tb_rca_NBits
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.full_adder:v <0x79156964>
-			streams:   0, words:     0
-		worklib.tb_rca_4bits:v <0x109b265f>
-			streams:   4, words: 13180
+		worklib.tb_rca_NBits:v <0x366e79bd>
+			streams:   3, words:  6242
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                 6       3
-		Registers:               3       3
-		Scalar wires:            9       -
-		Expanded wires:          8       2
+		Modules:                10       4
+		Registers:               5       5
+		Scalar wires:           18       -
+		Expanded wires:         16       2
 		Initial blocks:          1       1
-		Cont. assignments:       0       2
-		Pseudo assignments:      3       -
+		Cont. assignments:       0       5
+		Pseudo assignments:      2       -
 		Simulation timescale:  1ps
-	Writing initial simulation snapshot: worklib.tb_rca_4bits:v
-Loading snapshot worklib.tb_rca_4bits:v .................... Done
+	Writing initial simulation snapshot: worklib.tb_rca_NBits:v
+Loading snapshot worklib.tb_rca_NBits:v .................... Done
 xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
 xcelium> run
-Time | a    b    cin | sum   cout
------------------------------------
-10000 | 0000 0000 0 | 0000 0
-20000 | 0101 0011 0 | 1000 0
-30000 | 1111 0001 0 | 0000 1
-40000 | 1010 0101 1 | 0000 1
-50000 | 1111 1111 1 | 1111 1
+Starting RCA random test with 8-bit inputs
+TEST PASSED
+A=00100100 B=10000001 Sum=10100101.
+TEST PASSED
+A=00001001 B=01100011 Sum=01101100.
+TEST PASSED
+A=00001101 B=10001101 Sum=10011010.
+TEST PASSED
+A=01100101 B=00010010 Sum=01110111.
+TEST PASSED
+A=00000001 B=00001101 Sum=00001110.
+TEST PASSED
+A=01110110 B=00111101 Sum=10110011.
+TEST PASSED
+A=11101101 B=10001100 Sum=01111001.
+TEST PASSED
+A=11111001 B=11000110 Sum=10111111.
+TEST PASSED
+A=11000101 B=10101010 Sum=01101111.
+TEST PASSED
+A=11100101 B=01110111 Sum=01011100.
+ALL TESTS PASSED ✅
 Simulation complete via $finish(1) at time 50 NS + 0
-./rca_test.v:40     $finish;
+./tb/tb_rca_Nbits.v:52         $finish;
 xcelium> exit
-TOOL:	xrun(64)	23.09-s013: Exiting on Sep 09, 2025 at 14:53:55 -03  (total: 00:00:01)
+TOOL:	xrun(64)	23.09-s013: Exiting on Sep 16, 2025 at 22:00:53 -03  (total: 00:00:01)

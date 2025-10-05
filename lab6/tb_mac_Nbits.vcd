@@ -1,0 +1,25 @@
+$date
+    Sep 23, 2025  13:50:26
+$end
+$version
+    TOOL:	xmsim(64)	23.09-s013
+$end
+$timescale
+    1 ps
+$end
+
+$scope module tb_mac_Nbits $end
+$var parameter 32 !    TB_WIDTH $end
+
+$scope module mac_Nbits $end
+$var parameter 32 "    WIDTH $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b1000 "
+b1000 !
+$end
+#120000
