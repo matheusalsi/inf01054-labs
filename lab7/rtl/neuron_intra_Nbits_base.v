@@ -1,7 +1,9 @@
+`timescale 1ns / 1ps
+
 module neuron_intra_Nbits #(
     parameter N = 8,
     parameter N_INPUTS = 32,
-    parameter LOG_N_INPUTS = 3
+    parameter LOG_N_INPUTS = 5
 ) (
     input  wire                         clk,
     input  wire                         rst,
