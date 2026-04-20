@@ -24,3 +24,4 @@ outputs/
 reports
 *.cmd*
 *.rs*
+gpdk045_workspace/
